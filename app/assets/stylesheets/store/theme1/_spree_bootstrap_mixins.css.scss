@@ -1,0 +1,107 @@
+// Flash messages/alerts: Spree uses flash.notice, .success & .error
+
+.flash {
+  @extend .alert;
+
+  &.notice {
+    @extend .alert-info;
+  }
+  &.success {
+    @extend .alert-success;
+  }
+  &.error {
+    @extend .alert-error;
+  }
+}
+
+.errorExplanation {
+  @extend .flash.error;
+  @extend .flash;
+
+  p {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 30px;
+
+    li {
+      font-weight: normal;
+    }
+  }
+}
+
+// Buttons
+
+input[type="button"],
+input[type= "reset"], button, a.button {
+  @extend .btn;
+}
+
+input[type="submit"] {
+  @extend .btn;
+  @extend .btn-primary;
+}
+// Breadcrumbs.  Mixing bootstrap class breadcrumb
+#breadcrumbs ul{
+  @extend .breadcrumb
+}
+
+// skeleton
+/* Base Grid */
+.container .column,
+.container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+.column.alpha, .columns.alpha               { margin-left: 0; }
+.column.omega, .columns.omega               { margin-right: 0; }
+
+.container .one.column,
+.container .one.columns                     { @extend .span1 }
+.container .two.columns                     { @extend .span2 }
+.container .three.columns                   { @extend .span2 }
+.container .four.columns                    { @extend .span3 }
+.container .five.columns                    { @extend .span4 }
+.container .six.columns                     { @extend .span5 }
+.container .seven.columns                   { @extend .span5 }
+.container .eight.columns                   { @extend .span6 }
+.container .nine.columns                    { @extend .span7 }
+.container .ten.columns                     { @extend .span7 }
+.container .eleven.columns                  { @extend .span8 }
+.container .twelve.columns                  { @extend .span9 }
+.container .thirteen.columns                { @extend .span10 }
+.container .fourteen.columns                { @extend .span11 }
+.container .fifteen.columns                 { @extend .span11 }
+.container .sixteen.columns                 { @extend .span12 }
+
+.container .one-third.column                { @extend .span4 }
+.container .two-thirds.column               { @extend .span7 }
+
+/* Offsets */
+.container .offset-by-one                   { @extend .offset1  }
+.container .offset-by-two                   { @extend .offset2 }
+.container .offset-by-three                 { @extend .offset2 }
+.container .offset-by-four                  { @extend .offset3 }
+.container .offset-by-five                  { @extend .offset4 }
+.container .offset-by-six                   { @extend .offset5 }
+.container .offset-by-seven                 { @extend .offset5 }
+.container .offset-by-eight                 { @extend .offset6 }
+.container .offset-by-nine                  { @extend .offset7 }
+.container .offset-by-ten                   { @extend .offset8 }
+.container .offset-by-eleven                { @extend .offset8 }
+.container .offset-by-twelve                { @extend .offset9 }
+.container .offset-by-thirteen              { @extend .offset10 }
+.container .offset-by-fourteen              { @extend .offset11 }
+.container .offset-by-fifteen               { @extend .offset11 }    
+
+//thumbnails
+.tmb-all {
+  @extend .thumbnail;
+}
+// Spree's progress-steps are > bootstraps
+
+// Forms
+// Buttons
+.large { @extend .btn-large; }
+.primary { @extend .btn-primary; }
+
+// Tables
