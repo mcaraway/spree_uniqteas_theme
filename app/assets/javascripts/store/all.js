@@ -6,7 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 
 //= require store/spree_core
 //= require store/spree_auth
@@ -16,3 +15,4 @@
 //= require store/spree_social_products
 
 //= require_tree .
+//= require bootstrap

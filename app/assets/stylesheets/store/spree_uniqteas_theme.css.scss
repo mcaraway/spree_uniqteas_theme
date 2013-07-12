@@ -1,6 +1,7 @@
 @import './variables';
 @import "store/spree_bootstrap_mixins";
 @import "store/bootstrap";
-@import "store/bootstrap-responsive";
+// @import "store/bootstrap-responsive";
+@import "store/spree_overrides";
 @import "store/bootstrap-custom";
 

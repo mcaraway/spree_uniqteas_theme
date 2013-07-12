@@ -1,43 +1,73 @@
-#main {
-  background: url("background.png") repeat-x scroll 0 0;	
+#main {	
+  background-color: white;
+  border-left: 20px solid white;
+  border-right: 20px solid white;
+  border-top-left-radius:0em;
+  border-top-right-radius:0em;
+  border-bottom-right-radius:1em;
+  border-bottom-left-radius:1em;
 }
 
-#main .span12 {
-  margin-left: 0px;
+@media (min-width: 1200px) {
+	#main {	
+  		border-left: 30px solid white;
+  		border-right: 30px solid white;
+  	}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	#main {	
+  		border-left: 20px solid white;
+  		border-right: 20px solid white;
+  	}
 }
 
-#footer {
-  background-color: $beigeLight;
-  padding-top: 15px;
+#wrapper {	
+  padding-bottom: 40px;
 }
 
-#footer a {
-  color: $beigeDark;
-  &:hover {
-    color: $linkColorHover;
-  }  
+.wrapper {
+  background-color: white;	
 }
+
+#subheader {
+  overflow: hidden;
+  
+  .subheader-wrapper {
+    padding: 20px 10px;
+    overflow: hidden;
+
+    h1 {
+  	  border-bottom: 1px solid $grayLight;
+      clear: both;
+      font-size: 34px;
+      font-weight: 300;
+    }
+  }
+}
+
 .catbar-inner {
   @extend .navbar-inner;
   margin-top: -20px;
   min-height: 20px;
-  background-color: $beigeLight;
+  background-color: white;
   background-image: none;
 }
 
 .navbar .catbar-inner .nav > li > a {
-  color: $beigeDark;
+  color: $textColor;
   &:hover {
   color: $linkColor;
   }
 }
 
 .top-bar {
-	padding: 10px;
-	color: white;
+	@extend .row;
+	padding: 10px 0px 10px 0px;
+	color: $grayDarker;
 	font-size: 1.4em;
-	background-color: $mainBrandColor;
+  	background-color: white;
 }
+
 .top-bar a {
   color: $linkColorLighter;
   
@@ -65,53 +95,56 @@
 		display: none;
 	}
 	.top-bar {
-	font-size: 1em;
+		display: none;
 	}
 }
 .top-promo {
-  height: 550px;
-  -webkit-box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
-  padding-bottom: 20px;
-  margin-bottom: 5px;
+  margin: 30px 0px 10px 0px;
 }
 
 .top-promo-slider {
 	@extend .container;
 	background-color: white;
-	padding: 10px;
-	border: 1px solid #CCCCCC !important;
-	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2) !important;
-	-webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2) !important;
-	-moz-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2) !important;
+}
+.relative {
+  position: relative;
 }
 
 .bottom-promo {
   margin-bottom: 5px;
-  padding: 1em 0 1em 0;
-  background-color: $beigeLight;
-  -webkit-box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+  padding: 0em 0 1em 0;
+  background-color: white;
 }
 
-.center-align {
+.bottom-promo-text {
+	position: absolute;
+	top: 60%;
+	left: 5%;
+	width: 90%;
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+.align-center {
   text-align: center;
+}
+
+.margin-top {
+	margin-bottom: 10px;
+}
+
+.margin-bottom {
+	margin-bottom: 10px;
 }
 
 .main_wrapper {
   margin-bottom: 5px;
   padding: 0em 0 1em 0;
-  -webkit-box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
-}
-
-#main-image, .product-image {
-	position: relative;
-	text-align: center;
-	margin-bottom: 10px;
 }
 
 .on-sale-ribbon {
 	position: absolute;
 	top: -10px;
-	right: -17px;
+	right: -10px;
 	z-index: 5;
 	width: 84px;
 	height: 84px;
@@ -132,4 +165,16 @@
 	background-repeat: no-repeat;
 	background-position: left top;
 	text-indent: -99999px;
+}
+
+.carousel-inner {
+	border: 1px solid #CCCCCC !important;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+	border-bottom-right-radius:0em;
+	border-bottom-left-radius:0em;
+}
+
+dl dd {
+	margin-left: 20px;
 }

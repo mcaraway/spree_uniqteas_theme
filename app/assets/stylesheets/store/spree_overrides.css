@@ -1,0 +1,92 @@
+// spree_core
+
+#main-image, .product-image {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.order-summary, #cart-detail {
+  @extend .table;
+}
+
+footer#footer {
+  border: none;
+}
+
+#footer {
+  background-color: $bodyBackground;
+  padding-top: 15px;
+}
+
+#footer a {
+  color: $beigeDark;
+  &:hover {
+    color: $linkColorHover;
+  }  
+}
+
+span.required {
+    color: $red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#order .row {
+  margin: 0px;
+}
+
+// spree_address_book
+
+// spree_auth_devise
+
+#existing-customer, #new-customer, #forgot-password {
+  @extend .well;
+}
+
+#new-customer h6, #existing-customer h6, #forgot-password h6{
+  @extend legend;
+}
+
+.new_spree_user, .existing_spree_user {
+  @extend .form-horizontal;
+}
+
+#user-info {
+  @extend .well;
+}
+
+// spree_contact_us
+
+#contact_form {
+  @extend .well;
+}
+#contact_form input[type="text"], #contact_from select, #contact_form textarea {
+  @extend .input-xlarge;
+}
+// spree_social_products
+
+#social_nav {
+  height: 80px;
+  padding-top: 15px
+}
+#social_nav ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+#social_nav ul li {
+  float: left;
+  padding: 5px 0 0 0;
+  margin-right: 10px;
+  list-style-type: none;
+}
+#social_nav ul li a {
+  padding: 4px 5px 0 0;
+  height: 32px;
+  text-decoration: none;
+  line-height: 1.45em;
+}
+.reddit img {
+  padding-top: 3px;
+}

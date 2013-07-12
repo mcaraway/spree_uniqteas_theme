@@ -58,40 +58,40 @@ input[type="submit"] {
 .container .one.column,
 .container .one.columns                     { @extend .span1 }
 .container .two.columns                     { @extend .span2 }
-.container .three.columns                   { @extend .span2 }
-.container .four.columns                    { @extend .span3 }
-.container .five.columns                    { @extend .span4 }
-.container .six.columns                     { @extend .span5 }
-.container .seven.columns                   { @extend .span5 }
-.container .eight.columns                   { @extend .span6 }
-.container .nine.columns                    { @extend .span7 }
-.container .ten.columns                     { @extend .span7 }
-.container .eleven.columns                  { @extend .span8 }
-.container .twelve.columns                  { @extend .span9 }
-.container .thirteen.columns                { @extend .span10 }
-.container .fourteen.columns                { @extend .span11 }
-.container .fifteen.columns                 { @extend .span11 }
-.container .sixteen.columns                 { @extend .span12 }
+.container .three.columns                   { @extend .span3 }
+.container .four.columns                    { @extend .span4 }
+.container .five.columns                    { @extend .span5 }
+.container .six.columns                     { @extend .span6 }
+.container .seven.columns                   { @extend .span7 }
+.container .eight.columns                   { @extend .span8 }
+.container .nine.columns                    { @extend .span9 }
+.container .ten.columns                     { @extend .span10 }
+.container .eleven.columns                  { @extend .span11 }
+.container .twelve.columns                  { @extend .span12 }
+.container .thirteen.columns                { @extend .span13 }
+.container .fourteen.columns                { @extend .span14 }
+.container .fifteen.columns                 { @extend .span15 }
+.container .sixteen.columns                 { @extend .span16 }
 
 .container .one-third.column                { @extend .span4 }
-.container .two-thirds.column               { @extend .span7 }
+.container .two-thirds.column               { @extend .span9 }
 
 /* Offsets */
 .container .offset-by-one                   { @extend .offset1  }
 .container .offset-by-two                   { @extend .offset2 }
-.container .offset-by-three                 { @extend .offset2 }
-.container .offset-by-four                  { @extend .offset3 }
-.container .offset-by-five                  { @extend .offset4 }
-.container .offset-by-six                   { @extend .offset5 }
-.container .offset-by-seven                 { @extend .offset5 }
-.container .offset-by-eight                 { @extend .offset6 }
-.container .offset-by-nine                  { @extend .offset7 }
-.container .offset-by-ten                   { @extend .offset8 }
-.container .offset-by-eleven                { @extend .offset8 }
-.container .offset-by-twelve                { @extend .offset9 }
-.container .offset-by-thirteen              { @extend .offset10 }
-.container .offset-by-fourteen              { @extend .offset11 }
-.container .offset-by-fifteen               { @extend .offset11 }    
+.container .offset-by-three                 { @extend .offset3 }
+.container .offset-by-four                  { @extend .offset4 }
+.container .offset-by-five                  { @extend .offset5 }
+.container .offset-by-six                   { @extend .offset6 }
+.container .offset-by-seven                 { @extend .offset7 }
+.container .offset-by-eight                 { @extend .offset8 }
+.container .offset-by-nine                  { @extend .offset9 }
+.container .offset-by-ten                   { @extend .offset10 }
+.container .offset-by-eleven                { @extend .offset11 }
+.container .offset-by-twelve                { @extend .offset12 }
+.container .offset-by-thirteen              { @extend .offset13 }
+.container .offset-by-fourteen              { @extend .offset14 }
+.container .offset-by-fifteen               { @extend .offset15 }    
 
 //thumbnails
 .tmb-all {

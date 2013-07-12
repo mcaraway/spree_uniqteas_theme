@@ -22,7 +22,7 @@
 			<% end %>
 			<%= link_to product_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
 			<h5><%= link_to truncate(product.name, :length => 32), product, :class => 'align-center', :itemprop => "name", :title => product.name %></h5>
-			<span class="description"><%= truncate(product.description, :length => 145).html_safe %></span>
+			<span class="description"><%= truncate(product.description, :length => 138).html_safe %></span>
 		</div>
 	</li>
 	<% end %>
