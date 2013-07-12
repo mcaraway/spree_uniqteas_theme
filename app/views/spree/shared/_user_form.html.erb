@@ -1,0 +1,25 @@
+	<fieldset>
+		<div class="control-group">
+			<!-- Username -->
+			<%= f.label :email, t(:email), :class => "control-label", "for" => "spree_user_email" %>
+			<div class="controls">
+				<%= f.email_field :email, :class => 'input-xlarge', "placeholder" => "email" %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<!-- Password-->
+			<%= f.label :password, t(:password), :class => "control-label", "for" => "spree_user_password" %>
+			<div class="controls">
+    			<%= f.password_field :password, :class => 'input-xlarge', "placeholder" => "password" %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<!-- Password-->
+			<%= f.label :password_confirmation, t(:confirm_password), :class => "control-label", "for" => "spree_user_password_confirmation" %>
+			<div class="controls">
+    			<%= f.password_field :password_confirmation, :class => 'input-xlarge', "placeholder" => "confirm password" %>
+			</div>
+		</div>
+	</fieldset>
