@@ -42,7 +42,7 @@ $linkColorHover: darken($linkColor, 15%);
 $baseBorderRadius: 6px;
 $borderRadiusLarge: 12px;
 $borderRadiusSmall: 3px;
-
+$contentBackground: white;
 
 // Typography
 $sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -176,8 +176,8 @@ $popoverArrowOuterColor: text(0,0,0,.25);
 
 
 // Sprites
-$iconSpritePath: '../twitter-bootstrap/img/glyphicons-halflings.png';
-$iconWhiteSpritePath: '../twitter-bootstrap/img/glyphicons-halflings-white.png';
+$iconSpritePath: '../images/bootstrap/glyphicons-halflings.png';
+$iconWhiteSpritePath: '../images/bootstrap/glyphicons-halflings-white.png';
 
 
 // Private

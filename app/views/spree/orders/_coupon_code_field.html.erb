@@ -1,0 +1,12 @@
+<% if Spree::Promotion.count > 0 %>
+<hr />
+<div class="text-right">
+	<div class="input-append ">
+		<input class="span2" id="appendedInputButton" placeholder="<%= t(:coupon_code)%>" type="text">
+		<button class="btn" type="submit" >
+			<Go!>
+				<%= t(:apply)%>
+		</button>
+	</div>
+</div>
+<% end %>

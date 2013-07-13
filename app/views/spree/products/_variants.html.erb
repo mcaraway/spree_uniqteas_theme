@@ -12,12 +12,36 @@
 		checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
 		price = v.price_in(current_currency).display_price
 		has_checked = true if checked %>
-		<button type="button" class="btn btn-primary" name="products[<%=@product.id%>]" data-price="<%=price%>"><%= value.presentation %></button>
+		<%= radio_button_tag "products[#{@product.id}]", v.id, checked, :class => "hidden", :disabled => !v.in_stock && !Spree::Config[:allow_backorders], 'data-price' => v.price_in(current_currency).display_price %>
+		<button type="button" data-toggle-name="<%= 'products_' + @product.id.to_s + "_"+v.id.to_s %>" class="btn btn-primary" name="products[<%= @product.id%>]" data-price="<%= price%>">
+			<%= value.presentation %>
+		</button>
 
 		<% end %>
 		<% end %>
 		<% end %>
 	</div>
 	<% end %>
+	<input type="hidden" name="is_private" value="0" />
 </div>
+<script type="text/javascript">
+	$(function() {
+		$('div.btn-group[data-toggle-name]').each(function() {
+			var group = $(this);
+			var form = group.parents('form').eq(0);
+			var name = group.attr('data-toggle-name');
+			var hidden = $('input[name="' + name + '"]', form);
+			$('button', group).each(function() {
+				var button = $(this);
+				button.live('click', function() {
+					hidden.val($(this).prop('checked',true));
+				});
+				if (button.val() == hidden.val()) {
+					button.addClass('active');
+				}
+			});
+		});
+	}); 
+</script>
+
 <% end%>
