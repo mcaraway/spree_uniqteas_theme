@@ -1,6 +1,7 @@
 Spree::HomeController.class_eval do
   def index
-    @home_page_sliders = Spree::HomePageSlider.all
+    @top_promo = Spree::HomePageSlider.where(:location => 'top')
+    @bottom_promo = Spree::HomePageSlider.where(:location => 'bottom')
 
     featured = Spree::Taxon.where(:name => 'Featured').first
     @featured_products = featured.products.active.limit(12) if featured

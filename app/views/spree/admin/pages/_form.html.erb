@@ -1,0 +1,43 @@
+<div data-hook="admin_inside_slider_form" class="field">
+  <%= f.field_container :name do %>
+    <%= f.label :name, t(:name) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :name, :class => 'fullwidth title' %>
+    <%= text_field :page, :name %>
+  <% end %>
+  <%= f.field_container :permalink do %>
+    <%= f.label :permalink, t(:permalink) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :permalink, :class => 'fullwidth title' %>
+    <%= text_field :page, :permalink %>
+  <% end %>
+  <%= f.field_container :page_title do %>
+    <%= f.label :page_title, t(:page_title) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :page_title, :class => 'fullwidth title' %>
+    <%= text_field :page, :page_title %>
+  <% end %>
+  <%= f.field_container :meta_keywords do %>
+    <%= f.label :meta_keywords, t(:meta_keywords) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :meta_keywords, :class => 'fullwidth title' %>
+    <%= text_field :page, :meta_keywords %>
+  <% end %>
+  <%= f.field_container :meta_description do %>
+    <%= f.label :meta_description, t(:meta_description) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :meta_description, :class => 'fullwidth title' %>
+    <%= text_field :page, :meta_description %>
+  <% end %>
+  <%= f.field_container :search_keywords do %>
+    <%= f.label :search_keywords, t(:search_keywords) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :search_keywords, :class => 'fullwidth title' %>
+    <%= text_field :page, :search_keywords %>
+  <% end %>
+  <%= f.field_container :html do %>
+    <%= f.label :html, t(:html) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :html, :class => 'fullwidth title' %>
+    <%= text_area :page, :html %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+      $("#page_html").markItUp(mySettings);
+   });
+</script>

@@ -1,5 +1,7 @@
 Spree::Core::Engine.routes.draw do
 
+  resources :pages
+
   namespace :admin do
 
     resources :home_page_sliders do
@@ -7,5 +9,7 @@ Spree::Core::Engine.routes.draw do
         post :update_positions
       end
     end
+    
+    resources :pages
   end
 end

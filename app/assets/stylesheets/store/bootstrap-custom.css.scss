@@ -1,79 +1,74 @@
-#main {	
-  background-color: white;
-  border-left: 20px solid white;
-  border-right: 20px solid white;
-  border-top-left-radius:0em;
-  border-top-right-radius:0em;
-  border-bottom-right-radius:1em;
-  border-bottom-left-radius:1em;
+#main {
+	background-color: white;
+	border-left: 20px solid white;
+	border-right: 20px solid white;
+	border-top-left-radius: 0em;
+	border-top-right-radius: 0em;
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
 }
 
 @media (min-width: 1200px) {
-	#main {	
-  		border-left: 30px solid white;
-  		border-right: 30px solid white;
-  	}
+	#main {
+		border-left: 30px solid white;
+		border-right: 30px solid white;
+	}
 }
 @media (min-width: 768px) and (max-width: 979px) {
-	#main {	
-  		border-left: 20px solid white;
-  		border-right: 20px solid white;
-  	}
+	#main {
+		border-left: 20px solid white;
+		border-right: 20px solid white;
+	}
 }
 
-#wrapper {	
-  padding-bottom: 40px;
+#wrapper {
+	padding-bottom: 40px;
 }
 
 .wrapper {
-  background-color: white;	
+	background-color: white;
 }
 
 #subheader {
-  overflow: hidden;
-  
-  .subheader-wrapper {
-    padding: 20px 10px;
-    overflow: hidden;
-
-    h1 {
-  	  border-bottom: 1px solid $grayLight;
-      clear: both;
-      font-size: 34px;
-      font-weight: 300;
-    }
-  }
+	overflow: hidden;.subheader-wrapper {
+	overflow: hidden;h1 {
+	border-bottom: 1px solid $grayLight;
+	clear: both;
+	font-size: 34px;
+	font-weight: 300;
+}
+}
 }
 
 .catbar-inner {
-  @extend .navbar-inner;
-  margin-top: -20px;
-  min-height: 20px;
-  background-color: white;
-  background-image: none;
+@extend .navbar-inner;
+margin-top: -20px;
+min-height: 20px;
+background-color: white;
+background-image: none;
 }
 
 .navbar .catbar-inner .nav > li > a {
-  color: $textColor;
-  &:hover {
-  color: $linkColor;
-  }
+	color: $textColor;
+	&:hover {
+	color: $linkColor;
+}
 }
 
 .top-bar {
-	@extend .row;
-	padding: 10px 0px 10px 0px;
-	color: $grayDarker;
-	font-size: 1.4em;
-  	background-color: white;
+@extend .row;
+padding: 10px 0px 10px 0px;
+color: $grayDarker;
+font-size: 1.4em;
+background-color: white;
 }
 
 .top-bar a {
-  color: $linkColorLighter;
-  
-  &:hover {
-    color: $linkColorHover;
-  }
+	color: $linkColorLighter;
+
+	&:hover {
+	color: $linkColorHover;
+}
 }
 
 .top-bar-right, .top-bar-left {
@@ -85,10 +80,9 @@
 		display: none;
 	}
 	.top-bar {
-	font-size: 1.2em;
+		font-size: 1.2em;
 	}
 }
-
 
 @media (max-width: 480px) {
 	.top-bar-right {
@@ -99,21 +93,30 @@
 	}
 }
 .top-promo {
-  margin: 30px 0px 10px 0px;
+	margin: 30px 0px 10px 0px;
 }
 
-.top-promo-slider {
-	@extend .container;
+.category-header {
+	margin: 0px 0px 10px 0px;
+	overflow: hidden;
+	border: 1px solid #CCCCCC !important;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: .25em;
+	border-bottom-left-radius: .25em;
+}
+
+.top-promo-slider {@extend .container;
 	background-color: white;
 }
 .relative {
-  position: relative;
+	position: relative;
 }
 
 .bottom-promo {
-  margin-bottom: 5px;
-  padding: 0em 0 1em 0;
-  background-color: white;
+	margin-bottom: 5px;
+	padding: 0em 0 1em 0;
+	background-color: white;
 }
 
 .bottom-promo-text {
@@ -125,7 +128,7 @@
 	line-height: 1.4em;
 }
 .align-center {
-  text-align: center;
+	text-align: center;
 }
 
 .margin-top {
@@ -140,8 +143,8 @@
 	padding: 10px;
 }
 .main_wrapper {
-  margin-bottom: 5px;
-  padding: 0em 0 1em 0;
+	margin-bottom: 5px;
+	padding: 0em 0 1em 0;
 }
 
 .on-sale-ribbon {
@@ -149,9 +152,10 @@
 	top: -10px;
 	right: -10px;
 	z-index: 5;
-	width: 84px;
-	height: 84px;
+	width: 50px;
+	height: 50px;
 	background: url('sale.png');
+	background-size: 50px 50px;
 	background-repeat: no-repeat;
 	background-position: left top;
 	text-indent: -99999px;
@@ -162,9 +166,10 @@
 	top: -10px;
 	left: -8px;
 	z-index: 4;
-	width: 84px;
-	height: 84px;
+	width: 50px;
+	height: 50px;
 	background: url('new.png');
+	background-size: 50px 50px;
 	background-repeat: no-repeat;
 	background-position: left top;
 	text-indent: -99999px;
@@ -172,10 +177,10 @@
 
 .carousel-inner {
 	border: 1px solid #CCCCCC !important;
-	border-top-left-radius:1em;
-	border-top-right-radius:1em;
-	border-bottom-right-radius:0em;
-	border-bottom-left-radius:0em;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 0em;
+	border-bottom-left-radius: 0em;
 }
 
 dl dd {
