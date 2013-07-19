@@ -36,6 +36,17 @@ span.required {
   margin: 0px;
 }
 
+ul#products.thumbnails li div.thumbnail{
+	min-height: 425px;
+}
+
+ul.taxons-list {
+	list-style-type: none;
+}
+
+form#new_product, form.edit_product {
+	@extend .form-horizontal;
+}
 // spree_address_book
 
 // spree_auth_devise

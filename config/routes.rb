@@ -11,5 +11,7 @@ Spree::Core::Engine.routes.draw do
     end
     
     resources :pages
+    
+    resource :web_content
   end
 end
