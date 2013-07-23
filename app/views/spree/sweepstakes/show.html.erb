@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sweepstake.name %>
+</p>
+
+<p>
+  <b>Starts at:</b>
+  <%= @sweepstake.starts_at %>
+</p>
+
+<p>
+  <b>Expires at:</b>
+  <%= @sweepstake.expires_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_sweepstake_path(@sweepstake) %> |
+<%= link_to 'Back', sweepstakes_path %>

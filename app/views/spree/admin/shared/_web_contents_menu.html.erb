@@ -4,8 +4,9 @@
 <% content_for :sidebar do %>
 <nav class="menu">
 	<ul class="sidebar" data-hook="admin_configurations_sidebar_menu">
-      <%= configurations_sidebar_menu_item t(:home_page_sliders), admin_home_page_sliders_path %>
+      <%= configurations_sidebar_menu_item t(:promos), admin_home_page_sliders_path %>
       <%= configurations_sidebar_menu_item t(:pages), admin_pages_path %>
+      <%= configurations_sidebar_menu_item t(:sweepstakes), admin_sweepstakes_path %>
 	</ul>
 </nav>
 <% end %>

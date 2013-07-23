@@ -1,0 +1,41 @@
+<div data-hook="admin_inside_slider_form" class="field">
+	<%= f.field_container :name do %>
+	<%= f.label :name, t(:name) %> <span class="required">*</span>
+	<br />
+	<%= error_message_on :sweepstakes, :name, :class => 'fullwidth title' %>
+	<%= f.text_field :name %>
+	<% end %>	<%= f.field_container :description do %>
+	<%= f.label :description, t(:description) %> <span class="required">*</span>
+	<br />
+	<%= error_message_on :sweepstakes, :description, :class => 'fullwidth title' %>
+	<%= f.text_field :description %>
+	<% end %>
+	<%= f.field_container :starts_at do %>
+	<%= f.label :starts_at, t(:starts_at) %> <span class="required">*</span>
+	<br />
+	<%= error_message_on :sweepstakes, :starts_at, :class => 'fullwidth title' %>
+	<%= f.text_field :starts_at, :value => datepicker_field_value(@sweepstake.starts_at), :class => 'datepicker datepicker-from fullwidth' %>
+	<% end %>
+	<%= f.field_container :expires_at do %>
+	<%= f.label :expires_at, t(:expires_at) %> <span class="required">*</span>
+	<br />
+	<%= error_message_on :sweepstakes, :expires_at, :class => 'fullwidth title' %>
+	<%= f.text_field :expires_at, :value => datepicker_field_value(@sweepstake.expires_at), :class => 'datepicker datepicker-from fullwidth' %>
+	<% end %>
+	<div class="twelve columns alpha omega">
+	<%= f.field_container :products do %>
+	<%= f.label :products, t(:products) %> <span class="required">*</span>
+	<br />
+	<%= f.select :product_ids, products_options_for(@sweepstake), {}, :class => "select2 fullwidth", :multiple => true %>
+	<% end %>
+	</div>
+</div>
+
+<% unless Rails.env.test? %>
+  <script>
+  $("#sweepstake_product_ids").select2(maximumSelectionSize: 1,
+  	placeholder: 'select or type');
+
+  $('.select2-container').css({width: '20em'})
+  </script>
+<% end %>

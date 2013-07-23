@@ -1,16 +1,16 @@
 <%= render :partial => 'spree/admin/shared/web_contents_menu' %>
 
 <% content_for :page_title do %>
-  <%= t(:promos) %>
+  <%= t(:sweepstakes) %>
 <% end %>
 
 <% content_for :page_actions do %>
   <li>
-    <%= button_link_to t(:back_to_promos_list), spree.admin_home_page_sliders_path, :icon => 'icon-arrow-left' %>
+    <%= button_link_to t(:back_to_sweepstakes_list), spree.admin_sweepstakes_path, :icon => 'icon-arrow-left' %>
   </li>
 <% end %>
 
-<%= form_for [:admin, @home_page_slider] do |f| %>
+<%= form_for [:admin, @sweepstake] do |f| %>
 
   <%= render :partial => 'form', :locals => { :f => f } %>
   <fieldset class="no-border-top">

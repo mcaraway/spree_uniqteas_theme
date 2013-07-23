@@ -2,6 +2,7 @@ Spree::HomeController.class_eval do
   def index
     @top_promo = Spree::HomePageSlider.where(:location => 'top')
     @bottom_promo = Spree::HomePageSlider.where(:location => 'bottom')
+    @sweepstakes = Spree::Sweepstake.all.reject(&:expired?)
 
     featured = Spree::Taxon.where(:name => 'Featured').first
     @featured_products = featured.products.active.limit(12) if featured

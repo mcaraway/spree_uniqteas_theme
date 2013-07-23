@@ -1,0 +1,42 @@
+<% if @sweepstakes != nil and @sweepstakes.any? %>
+<hr />
+<div class="span16">
+	<% @sweepstakes.each do |sweepstake| %>
+	<div class="row">
+		<div id="weeklyPickCopy" class="span15"></div>
+		<div class="span16 parss-title">Weekly Giveaway</div>
+		<% sweepstake.products.each do |product| %>
+		<div class="span3">
+			<%= product_image(product, :itemprop => "image") %>
+		</div>
+		<div class="span7">
+			<strong class="lead"><%= product.name %></strong>
+			<br />
+			<%= sweepstake.description %>
+		</div>
+		<% end %>
+		<div class="span6">
+			<div class="well">
+				<input type="radio" name="weeklyPickQuote" class="formDisableCss" value="Really hope I win this" checked="">
+				I want it! I want it!
+				<br>
+				<input type="radio" name="weeklyPickQuote" class="formDisableCss" value="I'm feeling lucky">
+				Give it to meeeeee.
+				<br>
+				<input type="radio" name="weeklyPickQuote" class="formDisableCss" value="My fingers are crossed">
+				The laws of attraction dictates it will be mine.
+				<br>
+				<input type="radio" name="weeklyPickQuote" class="formDisableCss" value="other">
+				<input type="text" name="weeklyPickQuoteOther" style="width:120px;">
+				<br>
+				<div style="padding:6px 0 0 30px;">
+					<%= get_weekly_drawing_link(sweepstake)%>
+				</div>
+			</div>
+		</div>
+		<br />
+		<em class="lead"> Enter by <%= sweepstake.expires_at %> to be eligible.</em>
+	</div>
+	<% end %>
+</div>
+<% end %>
