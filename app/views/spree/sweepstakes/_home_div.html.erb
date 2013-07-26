@@ -1,10 +1,11 @@
 <% if @sweepstakes != nil and @sweepstakes.any? %>
-<hr />
+
 <div class="span16">
+	<hr />
 	<% @sweepstakes.each do |sweepstake| %>
 	<div class="row">
 		<div id="weeklyPickCopy" class="span15"></div>
-		<div class="span16 parss-title">Weekly Giveaway</div>
+		<div class="span16 parss-title" style="margin-bottom: 20px; color: green;">Weekly Giveaway</div>
 		<% sweepstake.products.each do |product| %>
 		<div class="span3">
 			<%= product_image(product, :itemprop => "image") %>

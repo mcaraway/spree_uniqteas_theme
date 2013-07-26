@@ -101,3 +101,54 @@ form#new_product, form.edit_product {
 .reddit img {
   padding-top: 3px;
 }
+// cart 
+#inside-product-cart-form {
+  background: $beigeLight;
+  padding: 10px;
+  margin: 0px;
+  border-left: 1px solid #CCCCCC !important;
+  border-right: 1px solid #CCCCCC !important;
+  border-bottom: 1px solid #CCCCCC !important;
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+#cart-form .cart-header{
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  color: white;
+  background: $brownMedium;
+  border: 1px solid #CCCCCC !important;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0em;
+  border-bottom-left-radius: 0em;
+}
+
+.variant-options {
+  width: 100%;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+.variant-description {
+  float: left;
+  font-weight: bold;
+  width: 50%;
+  color: $mainBrandColor;
+}
+.variant-price {
+  float: left;
+  font-weight: bold;
+  width: 20%;
+  text-align: right;
+  
+}
+.variant-quantity  {
+  float: left;
+  width: 20%;
+  padding-left: 15px;
+}
+.variant-quantity input {
+  width: 40px;
+}
