@@ -152,3 +152,151 @@ form#new_product, form.edit_product {
 .variant-quantity input {
   width: 40px;
 }
+
+/*
+ *= require store/spree_core
+*/
+#new-star img {
+  float: left;
+}
+
+#reviews {
+  background-color: $beigeLight;
+  border: 1px solid #CCCCCC !important;
+  padding: 10px;
+  border-radius: 0.5em;
+}
+#reviewModal {
+  background-color: $beigeLight;
+}
+
+#reviews h6 {
+  font-size: 16pt;
+  margin: 0px;
+}
+
+#reviews div.header {
+  font-size: 12pt;
+  font-weight: bold;
+  border-bottom: 1px #2222aa dashed;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#reviews div.review {
+  border-bottom: 1px #2222aa dashed;
+  margin-bottom: 10px;
+}
+
+#reviews div.review span.title {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+#reviews div.review span.attribution {
+  font-size: 8pt;
+}
+.ratings p {
+  font-size: 12px;
+  margin: 5px;
+}
+.button-review, .cancel-review {
+  color: #C2C2C2;
+  text-decoration: none;
+}
+.button-review:hover, .cancel-review:hover {
+  text-decoration: underline;
+}
+
+#new_review h6 {
+  font-size: 10pt;
+  margin: 0px;
+  padding: 5px 3px;
+}
+
+#new_review .review_name_field {
+  font-size: 12px;
+  margin-top: 5px;
+}
+#new_review p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#new_review .review_name_field input {
+  width: 200px;
+  height: 28px;
+  padding: 1px;
+  margin-bottom: 14px;
+}
+
+#new_review .review_review_field textarea {
+  width: 200px;
+  height: 80px;
+  padding: 1px;
+}
+
+.review-submit {
+  @extend .btn;
+  @extend .btn-primary;
+}
+.review .author {
+  float: left;
+}
+
+.right {
+  float: right !important;
+}
+
+.single_rating {
+  margin-right: 3px;
+}
+
+.single_rating.rate {
+  width: 180px;
+}
+
+.review .single_rating, .review .average {
+  float: left;
+  margin-left: 5px;
+}
+
+.lit {
+  background-color: #aaaaaa;
+  color: #0000bb;
+  margin-right: 1px;
+  padding-left: 1px;
+}
+
+.unlit {
+  background-color: #aaaaaa;
+  color: #000000;
+  margin-right: 1px;
+  padding-left: 1px;
+}
+
+.star-rating-control {
+  display: inline-block;
+  height: 15px;
+}
+
+.review_hr {
+  size: 1px;
+  background: silver;
+  border: none;
+  margin: 1em 0;
+}
+
+.s_bgmsg_red {
+  color: #84290A;
+  background-color: #FFE7DF !important;
+  width: 320px;
+  padding: 5px;
+}
+
+.s_bgmsg_green {
+  color: #468847;
+  background-color: #D6E9C6 !important;
+  width: 320px;
+  padding: 5px;
+}
