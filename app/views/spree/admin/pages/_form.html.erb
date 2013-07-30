@@ -29,6 +29,11 @@
     <%= error_message_on :page, :search_keywords, :class => 'fullwidth title' %>
     <%= text_field :page, :search_keywords %>
   <% end %>
+  <%= f.field_container :visible do %>
+    <%= f.label :visible, t(:visible) %> <span class="required">*</span><br />
+    <%= error_message_on :page, :visible, :class => 'fullwidth title' %>
+    <%= f.check_box :visible %>
+  <% end %>
   <%= f.field_container :html do %>
     <%= f.label :html, t(:html) %> <span class="required">*</span><br />
     <%= error_message_on :page, :html, :class => 'fullwidth title' %>
