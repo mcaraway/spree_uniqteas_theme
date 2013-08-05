@@ -22,7 +22,9 @@
 			<% end %>
 			<%= link_to product_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
 			<h5><%= link_to truncate(product.name, :length => 32), product, :class => 'align-center', :itemprop => "name", :title => product.name %></h5>
-			<span class="description"><%= truncate(product.description, :length => 138).html_safe %></span>
+			<span class="description"><%= truncate(product.description.gsub("<h3>Description</h3>",""), :length => 150).html_safe %></span>
+			<% if product.has_variants? %>
+			<% end %>
 		</div>
 	</li>
 	<% end %>
