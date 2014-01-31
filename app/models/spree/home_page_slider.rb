@@ -1,3 +1,3 @@
 class Spree::HomePageSlider < ActiveRecord::Base
-  attr_accessible :name, :html, :location
+  #attr_accessible :name, :html, :location
 end

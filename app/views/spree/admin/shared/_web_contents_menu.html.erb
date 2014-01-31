@@ -1,12 +1,12 @@
 <% content_for :sidebar_title do %>
-<%= t(:web_content) %>
+<%= Spree.t(:web_content) %>
 <% end %>
 <% content_for :sidebar do %>
 <nav class="menu">
 	<ul class="sidebar" data-hook="admin_configurations_sidebar_menu">
-      <%= configurations_sidebar_menu_item t(:promos), admin_home_page_sliders_path %>
-      <%= configurations_sidebar_menu_item t(:pages), admin_pages_path %>
-      <%= configurations_sidebar_menu_item t(:sweepstakes), admin_sweepstakes_path %>
+      <%= configurations_sidebar_menu_item Spree.t(:promos), admin_home_page_sliders_path %>
+      <%= configurations_sidebar_menu_item Spree.t(:pages), admin_pages_path %>
+      <%= configurations_sidebar_menu_item Spree.t(:sweepstakes), admin_sweepstakes_path %>
 	</ul>
 </nav>
 <% end %>

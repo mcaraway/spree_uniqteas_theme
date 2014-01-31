@@ -2,7 +2,7 @@
 <fieldset>
 	<div class="control-group">
 		<!-- Username -->
-		<%= f.label :email, t(:email), :class => "control-label", "for" => "spree_user_email" %>
+		<%= f.label :email, Spree.t(:email), :class => "control-label", "for" => "spree_user_email" %>
 		<div class="controls">
 			<%= f.email_field :email, :class => 'input-xlarge', "placeholder" => "email" %>
 		</div>
@@ -10,7 +10,7 @@
 
 	<div class="control-group">
 		<!-- Password-->
-		<%= f.label :password, t(:password), :class => "control-label", "for" => "spree_user_password" %>
+		<%= f.label :password, Spree.t(:password), :class => "control-label", "for" => "spree_user_password" %>
 		<div class="controls">
 			<%= f.password_field :password, :class => 'input-xlarge', "placeholder" => "password" %>
 		</div>
@@ -18,8 +18,8 @@
 	<div class="control-group">
 		<div class="controls">
 			<label class="checkbox"> <%= f.check_box :remember_me, :style => "float: left; margin-right: 10px;" %>
-				<%= t(:remember_me)%></label>
-			<%= f.submit t(:login), :class => 'btn btn-success', :tabindex => 3 %>
+				<%= Spree.t(:remember_me)%></label><br /><br />
+			<%= f.submit Spree.t(:login), :class => 'btn btn-success', :tabindex => 3 %>
 		</div>
 	</div>
 </fieldset>

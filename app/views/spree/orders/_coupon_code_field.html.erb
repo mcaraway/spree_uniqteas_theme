@@ -1,9 +1,9 @@
 <% if Spree::Promotion.count > 0 %>
 <hr />
 <div class="text-right">
-	<span class="text-success"><strong><%= t(:got_a_coupon_code)%></strong></span>&nbsp;
+	<span class="text-success"><strong><%= Spree.t(:got_a_coupon_code)%></strong></span>&nbsp;
 	<div class="input-append ">
-  		<%= order_form.text_field :coupon_code, :size => 10, :class=> "span2", "placeholder" => t(:coupon_code) %>
+  		<%= order_form.text_field :coupon_code, :size => 10, :class=> "span2", "placeholder" => Spree.t(:coupon_code) %>
 		<button class="btn" type="submit" >
 			<%= I18n.t(:apply) %>
 		</button>

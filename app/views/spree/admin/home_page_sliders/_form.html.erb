@@ -1,16 +1,16 @@
 <div data-hook="admin_inside_slider_form" class="field">
   <%= f.field_container :name do %>
-    <%= f.label :name, t(:name) %> <span class="required">*</span><br />
+    <%= f.label :name, Spree.t(:name) %> <span class="required">*</span><br />
     <%= error_message_on :home_page_slider, :name, :class => 'fullwidth title' %>
     <%= text_field :home_page_slider, :name %>
   <% end %>
   <%= f.field_container :location do %>
-    <%= f.label :location, t(:location) %> <span class="required">*</span><br />
+    <%= f.label :location, Spree.t(:location) %> <span class="required">*</span><br />
     <%= error_message_on :home_page_slider, :location, :class => 'fullwidth title' %>
     <%= select :home_page_slider, :location, [['Top-Promo','top'], ['Bottom-Promo','bottom']]%>
   <% end %>
   <%= f.field_container :html do %>
-    <%= f.label :html, t(:html) %> <span class="required">*</span><br />
+    <%= f.label :html, Spree.t(:html) %> <span class="required">*</span><br />
     <%= error_message_on :home_page_slider, :html, :class => 'fullwidth title' %>
     <%= text_area :home_page_slider, :html %>
   <% end %>

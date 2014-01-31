@@ -125,11 +125,15 @@ form#new_product, form.edit_product {
   border-bottom-right-radius: 0em;
   border-bottom-left-radius: 0em;
 }
+.variant-option-type {
+clear:both;  
+}
 
 .variant-options {
   width: 100%;
   margin-bottom: 5px;
   vertical-align: middle;
+  clear:both;
 }
 .variant-description {
   float: left;

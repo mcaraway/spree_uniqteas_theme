@@ -1,4 +1,13 @@
 Spree::BaseHelper.class_eval do
+  def per_cup_price(price, value)
+    price_hash = { "packaging_loose_sample" => 4, "packaging_loose_1oz" => 10,
+      "packaging_loose_2oz" => 20, "packaging_loose_4oz" => 40, "packaging_loose_8oz" => 80,
+      "packaging_loose_1lb" => 160 }
+    return if price_hash[value.name] == nil
+    
+    price = price / price_hash[value.name]
+  end
+  
   def get_name(sweepstake)
     product = sweepstake.products[0]
     product == nil ? 'Unknown' : product.name

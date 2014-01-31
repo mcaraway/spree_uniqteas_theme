@@ -8,19 +8,21 @@
 		values.sort_by(&:position).each do |value| %>
 		<% unless (variants = @product.variants_for_option_value(value)).empty? %>
 		<% variants.each do |v|
-		next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])
-		checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
+		
+		checked = !has_checked 
 		price = v.price_in(current_currency).display_price
+		cup_price = per_cup_price(v.price, value)
 		has_checked = true if checked %>
 		<div class="variant-options">
 			<div class="variant-description">
 				<%= value.presentation %>
+				<span style="color:#888;font-weight: normal;"><%= cup_price == nil ? "" : number_to_currency(cup_price*100, unit: "&cent;", precision: 0, format: "%n %u") + " per cup" %></span>
 			</div>
 			<div class="variant-price">
-				<%= price %>
+				<%= price %> 
 			</div>
 			<div class="variant-quantity">
-				<%= number_field_tag "variants[#{v.id}]" , 0, :class => 'title', :in => 0..@product.on_hand, :min => 0 %>
+				<%= number_field_tag "variants[#{v.id}]" , 0, :class => 'title', :in => 0..@product.total_on_hand, :min => 0 %>
 			</div>
 		</div>
 		<% end %>

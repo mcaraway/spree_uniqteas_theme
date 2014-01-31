@@ -68,7 +68,6 @@
 @media (min-width: 980px) and (max-width: 1199px){
   .navbar .nav > li > a {
     padding: 10px 8px 10px;
-    font-size: 14px;
   }
 }
 
@@ -252,6 +251,10 @@ label.error {
     background-size: 800px 500px;
 }
 
+#emailModelBody {
+  overflow-y: hidden;
+}
+
 #emailModelBody .mc-field-group {
   position: absolute;
   top: 84%;
@@ -269,8 +272,8 @@ label.error {
 
 #emailModelBody #mc-embedded-subscribe {
   position: absolute;
-  left: 75%;
-  top: 87%;
+  left: 76%;
+  top: 85%;
   background: none;
   border: none;
   box-shadow: none;
@@ -321,8 +324,8 @@ label.error {
   
   #emailModelBody #mc-embedded-subscribe {
     position: absolute;
-    left: 75%;
-    top: 86%;
+    left: 76%;
+    top: 85%;
     background: none;
     border: none;
     box-shadow: none;

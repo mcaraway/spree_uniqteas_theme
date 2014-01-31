@@ -1,0 +1,35 @@
+body {
+  background-color: #fff;
+}
+
+.navbar-inner {
+  background: transparent;
+}
+
+.top-bar2 {
+  padding: 18px 0px 0px 0px;
+  color: white;
+  font-size: 14px;
+  background-color: #000000;
+  min-height: 40px;
+  // background-image: -moz-linear-gradient(top, $beigeDark, $brownMedium);
+  // background-image: -webkit-gradient(linear, 0 0, 0 100%, from($beigeDark), to($brownMedium));
+  // background-image: -webkit-linear-gradient(top, $beigeDark, $brownMedium);
+  // background-image: -o-linear-gradient(top, $beigeDark, $brownMedium);
+  // background-image: linear-gradient(to bottom, $beigeDark, $brownMedium);
+  // background-repeat: repeat-x;
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$beigeDark  ', endColorstr='$brownMedium', GradientType=0);
+}
+
+#topbar .dropdown-menu a {
+  color: black;
+}
+
+#topbar .left-topbar-login a {
+  color: #999;
+}
+
+#topbar .navbar .nav > li > a {
+  font-weight: normal;
+}
+

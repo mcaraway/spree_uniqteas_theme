@@ -1,5 +1,5 @@
 <div class="cart-header">
-	<%= t(:add_to_cart)%>
+	<%= Spree.t(:add_to_cart)%>
 </div>
 <%= form_for :order, :url => populate_orders_path do |f| %>
 <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -11,23 +11,19 @@
 
 		<% if !@product.has_variants? %>
 		<div id="product-price">
-			<h6 class="product-section-title"><%= t(:price) %></h6>
+			<h6 class="product-section-title"><%= Spree.t(:price) %></h6>
 			<div>
 				<span class="price selling" itemprop="price"><%= @product.price_in(current_currency).display_price %></span>
 			</div>
 		</div>
 		<% end %>
 		<div class="add-to-cart">
-			<% if @product.on_sale? %>
 			<% if !@product.has_variants? %>
 			<%= number_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
-			1, :class => 'title', :in => 1..@product.on_hand, :min => 1 %>
+			1, :class => 'title', :in => 1..@product.total_on_hand, :min => 1 %>
 			<% end %>
 			<%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do %>
-			<%= t(:add_to_cart) %>
-			<% end %>
-			<% else %>
-			<%= content_tag('strong', t(:out_of_stock)) %>
+			<%= Spree.t(:add_to_cart) %>
 			<% end %>
 		</div>
 	</div>

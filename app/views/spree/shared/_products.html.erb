@@ -3,16 +3,16 @@
   paginated_products ||= products
 %>
 <% if products.empty? %>
-<%= t(:no_products_found) %>
+<%= Spree.t(:no_products_found) %>
 <% elsif params.key?(:keywords) %>
-<h6 class="search-results-title"><%= t(:search_results, :keywords => h(params[:keywords])) %></h6>
+<h6 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h6>
 <% end %>
 
 <% if products.any? %>
 <ul id="products" class="thumbnails" data-hook>
 	<% products.each do |product| %>
-	<% if product.on_display? %>
 	<li id="product_<%= product.id %>" class="span3" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+		<%= link_to(product) do %>
 		<div class="thumbnail product-image">
 			<% if product.on_promotion? %>
 			<span class="on-sale-ribbon">&nbsp;</span>
@@ -20,14 +20,31 @@
 			<% if product.new? %>
 			<span class="new-ribbon">&nbsp;</span>
 			<% end %>
-			<%= link_to product_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
-			<h5><%= link_to truncate(product.name, :length => 32), product, :class => 'align-center', :itemprop => "name", :title => product.name %></h5>
-			<span class="description"><%= truncate(product.description.gsub("<h3>Description</h3>",""), :length => 150).html_safe %></span>
+			<%= product_image(product, :itemprop => "image") %>
+			<h5><%= truncate(product.name, :length => 32) %></h5>
+			<span class="description"><%= truncate(product.get_short_description, :length => 150).html_safe %></span>
 			<% if product.has_variants? %>
+			<div style="width: 100%;text-align: center">
+				<em>Price</em>: <strong><%= product.lowest_price(current_currency) %> to <%= product.highest_price(current_currency) %></strong>
+			</div>
+			<% else %>
+
+			<%= form_for :order, :url => populate_orders_path do |f| %>
+			<div style="width: 100%;text-align: center">
+				<em>Price</em>: <strong><%= product.price_in(current_currency).display_price %></strong>
+			</div>
+			<div style="width: 100%;text-align: center">
+				<%= button_tag :class => 'primary', :id => 'add-to-cart-button', :type => :submit do %>
+				<%= Spree.t(:add_to_cart) %>
+				<% end %>
+			</div>
+			<%= number_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
+			1, :class => 'hidden', :in => 1..product.total_on_hand, :min => 1 %>
+			<% end %>
 			<% end %>
 		</div>
+		<% end %>
 	</li>
-	<% end %>
 	<% end %>
 	<% reset_cycle("classes") %>
 </ul>
@@ -36,3 +53,4 @@
 <% if paginated_products.respond_to?(:num_pages) %>
 <%= paginate paginated_products %>
 <% end %>
+

@@ -1,4 +1,4 @@
-<% if image %> 
+<% if defined?(image) && image %> 
   <%= image_tag image.attachment.url(:large), :itemprop => "image" %>
 <% else %>
   <%= large_image(@product, :itemprop => "image") %>

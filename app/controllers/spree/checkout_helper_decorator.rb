@@ -1,8 +1,8 @@
 Spree::CheckoutHelper.class_eval do
     def checkout_progress
       states = checkout_states
-      items = states.map do |state|
-        text = t("order_state.#{state}").titleize
+      items = states.map do |state|    
+        text = Spree.t("order_state.#{state}").titleize
 
         css_classes = []
         
