@@ -16,7 +16,7 @@
 <% if @bottom_promo != nil and @bottom_promo.any? %>
 <div class="span16">
 	<% @bottom_promo.each do |promo| %>
-	<div class="bottom-promo row">
+	<div class="bottom-promo">
 		<%= promo.html.html_safe %>
 	</div>
 	<% end %>
