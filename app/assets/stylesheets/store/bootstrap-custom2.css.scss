@@ -32,7 +32,36 @@
 #topbar .navbar .nav > li > a {
   font-weight: normal;
 }
+@media (min-width: 1400px) {
+  .ut2-top-promo {
+    width: 100%; 
+    height: 1015px; 
+    position: relative;    
+  }
+}
 
+@media (min-width: 980px) and (max-width: 1399px){
+  .ut2-top-promo {
+    width: 100%; 
+    height: 700px; 
+    position: relative;    
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ut2-top-promo {
+    width: 100%; 
+    height: 550px; 
+    position: relative;    
+  }
+}
+@media (max-width: 767px) {
+  .ut2-top-promo {
+    width: 100%; 
+    height: 400px; 
+    position: relative;    
+  }
+}
 .ut2-top-promo-slider {
   background-color: white;
   width: 100%;
@@ -40,7 +69,6 @@
   overflow-y: hidden;
   margin: 0px;
 }
-
 .ut2-carousel-inner {
   border-top-left-radius: 0em;
   border-top-right-radius: 0em;

@@ -132,11 +132,6 @@ font-size: 1.4em;
 	// }
 // }
 
-.top-promo {
-	margin: 30px 0px 10px 0px;
-	min-height: 524px;
-}
-
 .category-header {
 	margin: 0px 0px 10px 0px;
 	overflow: hidden;
@@ -146,21 +141,88 @@ font-size: 1.4em;
 	border-bottom-right-radius: .25em;
 	border-bottom-left-radius: .25em;
 }
+@media (min-width: 1319px) {
+  .top-promo {
+    margin: 30px 0px 10px 0px;
+    min-height: 520px;
+  }
+  
+  .top-promo-slider {@extend .container;
+    background-color: white;
+    width: 100%;
+    height: 520px;
+  }
+  
+  .bottom-promo {
+    margin-bottom: 5px;
+    padding: 0em 0 1em 0;
+    background-color: white;
+    height: 300px;
+  }  
+}
 
-.top-promo-slider {@extend .container;
-	background-color: white;
-	width: 100%;
-	height: 524px;
+@media (min-width: 980px) and (max-width: 1318px) {
+  .top-promo {
+    margin: 30px 0px 10px 0px;
+    min-height: 415px;
+  }
+  
+  .top-promo-slider {@extend .container;
+  	background-color: white;
+  	width: 100%;
+  	height: 415px;
+  }
+  
+  .bottom-promo {
+    margin-bottom: 5px;
+    padding: 0em 0 1em 0;
+    background-color: white;
+    height: 300px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .top-promo {
+    margin: 30px 0px 10px 0px;
+    min-height: 260px;
+  }
+  
+  .top-promo-slider {@extend .container;
+    background-color: white;
+    width: 100%;
+    height: 260px;
+  }  
+  
+  .bottom-promo {
+    margin-bottom: 5px;
+    padding: 0em 0 1em 0;
+    background-color: white;
+    height: 250px;
+  }  
+}
+
+
+@media (max-width: 767px) {
+  .top-promo {
+    margin: 30px 0px 10px 0px;
+    min-height: 260px;
+  }
+  
+  .top-promo-slider {@extend .container;
+    background-color: white;
+    width: 100%;
+    height: 260px;
+  } 
+  
+  .bottom-promo {
+    margin-bottom: 5px;
+    padding: 0em 0 1em 0;
+    background-color: white;
+    height: 200px;
+  }  
 }
 .relative {
 	position: relative;
-}
-
-.bottom-promo {
-	margin-bottom: 5px;
-	padding: 0em 0 1em 0;
-	background-color: white;
-	height: 303px;
 }
 
 .bottom-promo-text {
