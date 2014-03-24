@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails', '>= 3.2'
   s.add_dependency 'bootstrap-sass', '~> 3.1.1'
   s.add_dependency 'compass-rails'
-  s.add_dependency 'sprockets', '<= 2.11.0'
   
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails', '~> 4.0.0'  
