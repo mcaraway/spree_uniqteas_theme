@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_uniqteas_theme'
-  s.version     = '1.3.2'
+  s.version     = '2.1.0'
   s.summary     = 'Theme for my uniqteas store with bootstrap'
   s.description = 'Theme for my uniqteas store with bootstrap'
   s.required_ruby_version = '>= 1.8.7'
