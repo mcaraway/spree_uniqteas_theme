@@ -1,0 +1,24 @@
+<div class="sidemenu-inner">
+	<ul class="nav nav-pills nav-stacked">
+		<% if try_spree_current_user and !try_spree_current_user.guest? %>
+		<li>
+			<%= link_to t(:my_account), spree.account_path %>
+		</li>
+		<li>
+			<%= link_to t(:logout), spree.logout_path %>
+		</li>
+		<% else %>
+		<li id="login-link">
+			<%= link_to t(:login), spree.login_path %>
+		</li>
+		<% end %>
+		<li>
+			<%= link_to t(:our_story), '/pages/about'%>
+		</li>
+		<li>
+			<%= link_to t(:blog), 'http://teasherpa.wordpress.com/'%>
+		</li>
+		<%= categories_tree_inner(get_category_root, nil, 2, 1, false, false) %>
+	</ul>
+</div>
+
