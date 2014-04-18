@@ -1,3 +1,7 @@
 <% content_for :subheader do %>
+	<% if @taxon.icon_file_name.blank? %>
 	<img src="https://s3.amazonaws.com/uniqteas/images/categories/categories-<%= @taxon.permalink.split("/").second %>.jpg" alt="<%= @taxon.name %>" width="100%" %>
+	<% else %>
+	<img src="<%= @taxon.icon_file_name %>" alt="<%= @taxon.name %>" width="100%" %>
+	<% end %>
 <% end %>

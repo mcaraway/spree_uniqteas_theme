@@ -22,19 +22,19 @@
     transition: all .25s ease-out;   
 }
 .row-offcanvas-right .sidemenu-offcanvas {
-    right: -50%;
+    right: -70%;
 }
 
 .sidemenu-offcanvas {
     position: absolute;
     top: 50;
-    right: -50%;
-    width: 50%;
+    right: -70%;
+    width: 70%;
     height: 100%;
 }
   
 .sidemenu-inner {
-  height: 100%;
+  height: auto;
   margin: 0px;
   padding: 20px 0px 0px 10px;
   background-color: #1b1b1b;
@@ -58,7 +58,7 @@
   .sidemenu-offcanvas.active {
       position: fixed;
       top: 50px;
-      width: 50%;
+      width: 70%;
       right: 0;
       overflow: scroll;
   }
