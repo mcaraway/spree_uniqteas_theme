@@ -14,6 +14,7 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
   border-color: #252525;  
+  z-index: 999999;
 }
 .row-offcanvas {
     position: relative;
@@ -31,6 +32,7 @@
     right: -70%;
     width: 70%;
     height: 100%;
+    z-index: 9999999;
 }
   
 .sidemenu-inner {
@@ -59,7 +61,7 @@
       position: fixed;
       top: 50px;
       width: 70%;
-      right: 0;
+      right: 0%;
       overflow: scroll;
   }
 }
