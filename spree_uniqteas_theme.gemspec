@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '~> 1.3.2'
 
-  s.add_dependency 'spree_auth_devise', '~> 1.0.0'
+  s.add_dependency 'spree_auth_devise', '1.3.0'
   s.add_dependency 'bootstrap-sass', '~> 2.3.2.0'
   s.add_dependency 'compass-rails'
   
